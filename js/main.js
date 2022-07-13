@@ -1,5 +1,5 @@
 
-let contrasenaG = 'a';
+let contrasenaG = 'entrar';
 let continuar = false;
 
 function redondear(valor){
@@ -35,18 +35,13 @@ if(ingresar){
 
     let notasSumadas = notasTrabajos(notasTrabajosP1,notasTrabajosP2,notaTrabajoFinal)
     let resultado = notaFinal(notasSumadas,totalNotas)
-    
-    
-    alert(notasSumadas + 'Notas sumadas');
-    alert(resultado + 'resultado');
-
 
     if (resultado>=1 && resultado<=6){
-        alert('Desaprobo :(\nEl alumno:'+nombreAlumno+ 'desaprobo con trimestre con: '+resultado)
+        alert('Desaprobo :(\nEl alumno: '+nombreAlumno+ 'desaprobo con trimestre con: '+ Math.round(resultado))
     }else if(resultado>=7 && resultado<=9){
-        alert('Esta aprobado :)\nEl alumno: '+ nombreAlumno + ' Esta aprobado con: '+resultado)
+        alert('Esta aprobado :)\nEl alumno: '+ nombreAlumno + ' Esta aprobado con: '+Math.round(resultado))
     }else if (resultado===10){
-        alert('Esta aprobadisimo!!!! :D\nNo hace falta decirlo el alumno: '+nombreAlumno+'Se saco un 10!!!!')
+        alert('Esta aprobadisimo!!!! :D\nNo hace falta decirlo el alumno: '+nombreAlumno+'Se saco un '+Math.round(resultado)+'!!!!')
     }else{
         alert('ERROR!!!')
     }
