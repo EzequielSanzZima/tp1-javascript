@@ -2,23 +2,21 @@
 let contrasenaG = 'entrar';
 let continuar = false;
 
-function redondear(valor){
-    return Math.round(valor)
-}
 
 
 for (i=0; i>=0; i--){
     let usuarioPass = prompt('Ingresa la contrasena del instituto para acceder, te quedan '+ (i+1) + ' intentos.')
     if(contrasenaG === usuarioPass){
         alert("Ingresaste al sistema");
-        ingresar = true;
+        continuar = true;
         break;
     }else {
         alert("Te equivocaste muchas veces, te quedan "+ i +" intentos.")
+        continuar = false;
     }
 } 
 
-if(ingresar){
+if(continuar){
     let nombreAlumno = prompt('Ingrese nombre y apellido del Alumno');
     
     const notasTrabajos = function (a,b,c) { return a+b+c};
